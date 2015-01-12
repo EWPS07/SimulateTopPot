@@ -1,0 +1,86 @@
+<script>
+//------------------------------------------------------------------------------------------------------------------
+//here i name my TPlocation function and pass its parameters
+function TPlocation(StoreLocation, hoursOpen, footTrafficPHmin, footTrafficPHmax, percentageEnter, averageDNordered) 
+{
+	//initialize new instance with variables passed in
+	this.location = StoreLocation;
+	this.hours = hoursOpen;
+	this.footTrafficPHmin = footTrafficPHmin;
+	this.footTrafficPHmax = footTrafficPHmax;
+	this.percentageEnter = percentageEnter;
+	this.averageDNordered = averageDNordered;
+	//function used to generate random number between min/max foot traffic per hour provided	
+	}
+	this.DonutsPH = function() {
+		return (Math.round((Math.random() * (this.footTrafficPHmax - this.footTrafficPHmin) + this.footTrafficPHmin) * this.percentageEnter))
+	//function used to generate donuts needed per hour  
+	};
+	this.report = function(hour) {
+		
+      console.log((this.location + " needs " + (this.DonutsPH() ) * this.averageDNordered) + " donuts for hour: " + hour);
+	};
+	//this function regenerates the hourly number to be stored so that the daily donut need may be produced
+	this.hourlyTotal = function() {
+      return ((this.DonutsPH() ) * this.averageDNordered);
+	};
+};
+
+//here variable are named and passed their properties
+var downtown = new TPlocation("downtown", 11,  80, 220,  .1,  4);
+var capHill  = new TPlocation("capHill",  11,   5,  45, .45,  2);
+var SLUnion  = new TPlocation("SLUnion",  11, 180, 250, .05,  6);
+var WWood    = new TPlocation("WWood",    11,  20,  60, .20, 1.5);
+var Ballard  = new TPlocation("Ballard",  11,  25, 175, .33,  1);
+//here a for loop runs 11 times to generate a number for each of the 11 hours TopPot is open  
+for(i=0,dailyStoreTotal=0;i < 11;i++)
+{
+      downtown.DonutsPH();
+      downtown.report(i+1);
+      dailyStoreTotal += (downtown.hourlyTotal());
+}
+console.log("=======================================================");
+console.log("Downtown needs " + dailyStoreTotal + " for each day");
+console.log("=======================================================");
+
+for(i=0,dailyStoreTotal=0;i < 11;i++)
+{
+      capHill.DonutsPH();
+      capHill.report(i+1);
+      dailyStoreTotal += (capHill.hourlyTotal());
+}
+console.log("=======================================================");
+console.log("capHill needs " + dailyStoreTotal + " for each day");
+console.log("=======================================================");
+
+for(i=0,dailyStoreTotal=0;i <  11;i++)
+{
+      SLUnion.DonutsPH();
+      SLUnion.report(i+1);
+      dailyStoreTotal += (SLUnion.hourlyTotal());
+}
+console.log("=======================================================");
+console.log("SLUnion needs " + dailyStoreTotal + " for each day")	;
+console.log("=======================================================");
+
+for(i=0,dailyStoreTotal=0;i <  11;i++)
+{
+      WWood.DonutsPH();
+      WWood.report(i+1);
+      dailyStoreTotal += (WWood.hourlyTotal());
+}
+console.log("=======================================================");
+console.log("WWood needs " + dailyStoreTotal + " for each day");
+console.log("=======================================================");
+
+for(i=0,dailyStoreTotal=0;i < 11;i++)
+{
+      Ballard.DonutsPH();
+      Ballard.report(i+1);
+      dailyStoreTotal += (Ballard.hourlyTotal());
+}
+console.log("=======================================================");
+console.log("Ballard needs " + dailyStoreTotal + " for each day");
+console.log("=======================================================");
+//------------------------------------------------------------------------------------------------------------------
+</script>
