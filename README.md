@@ -1,6 +1,8 @@
 # SimulateTopPot
-
 This is the readme to SimulatTopPot.
+On this project we were asked to create a simulation of Top Pot's donut needs. To acheive this, first we must gather foot
+
+
 
 
 downtown needs 56 donuts for hour: 1
