@@ -1,8 +1,6 @@
 # SimulateTopPot
-This is the readme to SimulatTopPot.
-On this project we were asked to create a simulation of Top Pot's donut needs. To acheive this, first we must gather foot
-
-
+This is the readme to SimulatTopPot. On this project we were asked to create a simulation of Top Pot's donut needs. To acheive this, first we must gather foot traffic numbers by using Math.random. By providing the min/max foot traffic per hour for each location, a random numbeer is produced. That number is used in another function which calculates the donuts needed at each store for one hour. The fuction runs on a loop for the 11 hours each store is open. Those numbers are printed out to the console. Once the hourly totals print, they are followed by the daily need of each store. Also right before and after the daily totals, I have a console.log of a series of = marks. They were a reccomendation from my dad to help with readability of the results. To make this simulator more accurate I would reccomend separating by types of donuts.
+A calculation of donuts per hour is great, but with this calculator a store could still end up with more of one type than they need and not enough of a type do. Doing the calculations for every half hour or so could also add to it's accuracy.
 
 
 downtown needs 56 donuts for hour: 1
